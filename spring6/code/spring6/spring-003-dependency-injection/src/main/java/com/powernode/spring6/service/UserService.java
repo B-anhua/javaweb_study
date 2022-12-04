@@ -44,6 +44,6 @@ public class UserService {
         //保存用户信息到数据库
         userDao.insert();
         vipDao.insert();
-        System.out.println("123");
+
     }
 }
