@@ -36,8 +36,13 @@
             <version>2.19.0</version>
             <scope>test</scope>
         </dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.5</version>
+		</dependency>
 
-    </dependencies>
+	</dependencies>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
