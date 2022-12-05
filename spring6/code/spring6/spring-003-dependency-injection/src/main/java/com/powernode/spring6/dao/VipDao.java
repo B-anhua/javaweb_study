@@ -17,5 +17,6 @@ public class VipDao {
 
     public void insert(){
         logger.info("数据库信息正在保存VIP信息");
+        System.out.println(123);
     }
 }

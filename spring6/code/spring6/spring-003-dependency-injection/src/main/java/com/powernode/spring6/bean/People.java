@@ -2,38 +2,33 @@ package com.powernode.spring6.bean;
 
 /**
  * @PROJECT_NAME: spring6
- * @className: cat
+ * @className: People
  * @version: 1.0
  * @description:
  * @author: B-anhua
- * @date: 2022-12-05 15:00
+ * @date: 2022-12-06 00:40
  **/
 
-public class Cat {
+public class People {
     private String name;
     private int age;
+    private boolean sex;
 
-    public String getName() {
-        return name;
-    }
+    //c命名空间是简化构造注入的。
+    //c命名空间注入办法是基于构造方法的。
 
-    public int getAge() {
-        return age;
-    }
-
-    public void setName(String name) {
+    public People(String name, int age, boolean sex) {
         this.name = name;
-    }
-
-    public void setAge(int age) {
         this.age = age;
+        this.sex = sex;
     }
 
     @Override
     public String toString() {
-        return "cat{" +
+        return "People{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
+                ", sex=" + sex +
                 '}';
     }
 }
