@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="catBean" class="com.powernode.spring6.bean.Cat">
+<!--        不给属性注入，属性的值就是null-->
+<!--        <property name="name" value="tom"></property>-->
+
+        <property name="name">
+            <null/>
+        </property>
+        <property name="age" value="3"></property>
+    </bean>
+</beans>

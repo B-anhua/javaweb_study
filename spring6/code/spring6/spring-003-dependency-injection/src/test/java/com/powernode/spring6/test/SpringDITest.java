@@ -1,5 +1,6 @@
 package com.powernode.spring6.test;
 
+import com.powernode.spring6.bean.Cat;
 import com.powernode.spring6.service.UserService;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -15,6 +16,14 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  **/
 
 public class SpringDITest {
+
+
+    @Test
+   public void testNull(){
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("set-di.xml");
+        Cat catBean = applicationContext.getBean("catBean", Cat.class);
+        System.out.println(catBean);
+    }
 
     @Test
     public void testSetDI(){
