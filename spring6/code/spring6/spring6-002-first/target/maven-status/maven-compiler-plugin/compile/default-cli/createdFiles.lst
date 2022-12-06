@@ -1,0 +1,3 @@
+com\powernode\spring6\dao\UserDaoImplForMysql.class
+com\powernode\spring6\bean\User.class
+com\powernode\spring6\bean\Vip.class
