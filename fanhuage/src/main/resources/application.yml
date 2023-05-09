@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/fanhuage?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#  jackson:
+#  date-format: yyyy-MM-dd HH:mm:ss
+#  time-zone: GMT+8
+#
+  jackson:
+#    serialization:
+#      write-dates-as-timestamps: true
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+  main:
+#    去除控制台图标
+    banner-mode: off
+
+#    type: com.alibaba.druid.pool.DruidDataSource
+mybatis-plus:
+  global-config:
+    banner: false
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

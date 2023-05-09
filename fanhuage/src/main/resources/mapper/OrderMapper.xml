@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fanhuage.mapper.OrderMapper">
+
+    <resultMap id="BaseResultMap" type="com.fanhuage.domain.Orders">
+            <id property="orderId" column="order_id" jdbcType="VARCHAR"/>
+            <result property="customerName" column="customer_name" jdbcType="VARCHAR"/>
+        <result property="orderName" column="order_name" jdbcType="VARCHAR"/>
+            <result property="orderAddress" column="order_address" jdbcType="VARCHAR"/>
+        <result property="orderPhone" column="order_phone" jdbcType="VARCHAR"/>
+            <result property="orderStatus" column="order_status" jdbcType="INTEGER"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="orderNum" column="order_num" jdbcType="INTEGER"/>
+        <result property="orderAmount" column="order_amount" jdbcType="INTEGER"/>
+
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        order_id
+        ,customer_name,order_name,order_address,order_phone,
+        order_status,create_time,order_num,order_amount
+    </sql>
+</mapper>
