@@ -30,18 +30,13 @@ public class LoginController {
 
     // @CrossOrigin
     @PostMapping("/login")
-    public R<User> login(HttpServletRequest request, @RequestBody User user) {
+    public R<User> login(HttpServletRequest request,@RequestBody User user) {
+        return userService.login(request,user);
+    }
 
-        boolean login = userService.login(user);
-        if (!login) {
-            return R.error("用户名或密码错误");
-        }
-
-
-        request.getSession().setAttribute("user", user.getUname());
-/*        Object user1 = request.getSession().getAttribute("user");
-        System.out.println(user1);*/
-        return R.success(user);
+    @PostMapping("/sign")
+    public R<String> sign( @RequestBody User user) {
+         return userService.sign(user);
 
     }
 

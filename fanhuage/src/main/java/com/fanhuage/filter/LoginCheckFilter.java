@@ -39,6 +39,7 @@ public class LoginCheckFilter implements Filter {
         // 定义不需要处理的请求路径
         String[] urls = new String[]{
                 "/login",
+                "/sign",
                 "logout",
                 "http://127.0.0.1:5173/src/assets/*"
         };
